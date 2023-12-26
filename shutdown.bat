@@ -1,27 +1,33 @@
 @echo off
 
-:askHours
-set /P "hours=In how many hours you want to shutdown?"
+:askTime
+set /P "time=Enter the time for shutdown (HH:MM) "
 
-:: Check if all digits are numbers
+:: Extract hours and minutes
+for /F "tokens=1,2 delims=:" %%a in ("%time%") do (
+    set "hours=%%a"
+    set "minutes=%%b"
+)
+
+:: Check if both hours and minutes are numbers
 set "isValid=true"
-for /F "delims=0123456789" %%i in ("%hours%") do set "isValid=false"
+for /F "delims=0123456789" %%i in ("%hours%%minutes%") do set "isValid=false"
 
 :: Check validation
 if not "%isValid%"=="true" (
-    echo Please enter a valid number.
-    goto askHours
+    echo Please enter a valid time in HH:MM format.
+    goto askTime
 )
 
-:: Minutes
-set /A "minutes=%hours%*60"
+:: Convert to total minutes
+set /A "totalMinutes=%hours%*60 + %minutes%"
 
-:: Seconds
-set /A "seconds=%minutes%*60"
+:: Convert to seconds
+set /A "seconds=%totalMinutes%*60"
 
 :: Shutdown
-shutdown -s -t %seconds%
+rem shutdown -s -t %seconds%
 
-echo Your pc will shutdown in: %seconds% seconds
+echo Your pc will shutdown in: %hours% hours and %minutes% minutes (%seconds% seconds)
 
 pause
