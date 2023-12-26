@@ -22,6 +22,6 @@ This is a simple script designed for automatically shutting down your PC after a
 
 ## Notes
 
-- The script may require administrative privileges to execute the shutdown command.
+- The script may require admin privileges to execute the shutdown command.
 
 Feel free to customize and improve this script according to your preferences.
