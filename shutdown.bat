@@ -29,7 +29,7 @@ set /A "totalMinutes=%hours%*60 + %minutes%"
 set /A "seconds=%totalMinutes%*60"
 
 :: Shutdown
-rem shutdown -s -t %seconds%
+shutdown -s -t %seconds%
 
 echo Your pc will shutdown in: %hours% hours and %minutes% minutes (%seconds% seconds)
 
