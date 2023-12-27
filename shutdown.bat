@@ -19,6 +19,9 @@ if not "%isValid%"=="true" (
     goto askTime
 )
 
+:: Set minutes for only hour input
+if not defined minutes set "minutes=0"
+
 :: Convert to total minutes
 set /A "totalMinutes=%hours%*60 + %minutes%"
 

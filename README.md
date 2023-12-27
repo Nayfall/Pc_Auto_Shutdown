@@ -15,6 +15,11 @@ This is a simple script designed for automatically shutting down your PC after a
    Enter the time for shutdown (HH:MM) 01:30
    Your pc will shutdown in: 01 hours and 30 minutes (5400 seconds)
    ```
+2. **Input only hour:**
+   ```
+   Enter the time for shutdown (HH:MM) 1
+   Your pc will shutdown in: 1 hours and 0 minutes (3600 seconds)
+   ```
 
 ## Requirements
 
