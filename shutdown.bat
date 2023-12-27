@@ -1,7 +1,7 @@
 @echo off
 
 :askTime
-set /P "time=Enter the time for shutdown (HH:MM) "
+set /P "time=Enter the time for shutdown (HH:MM) or (HH) "
 
 :: Extract hours and minutes
 for /F "tokens=1,2 delims=:" %%a in ("%time%") do (
