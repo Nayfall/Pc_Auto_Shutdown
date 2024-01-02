@@ -2,6 +2,10 @@
 
 This is a simple script designed for automatically shutting down your PC after a specified period.
 
+## Requirements
+
+- Windows Operating System
+
 ## How to Use
 
 1. Run the script by double-clicking the file or executing it from the command line.
@@ -21,13 +25,9 @@ This is a simple script designed for automatically shutting down your PC after a
    Your pc will shutdown in: 01 hours and 0 minutes (3600 seconds)
    ```
 
-## Requirements
-
-- Windows Operating System
-
 ## Notes
 
 - The script may require admin privileges to execute the shutdown command.
 - The "HH" format can be used like "H" too
 
-Feel free to customize and improve this script according to your preferences.
+Feel free to contribute and enhance the script according to your preferences.
